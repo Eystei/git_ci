@@ -3,36 +3,37 @@ run-name: 🚀 Test ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.MAR
 
 on:
   workflow_dispatch:
-    ENV:
-      description: "Choose environment"
-      required: true
-      type: environment
+    inputs:
+      ENV:
+        description: "Choose environment"
+        required: true
+        type: environment
 
-    BROWSER:
-      description: "Select browser"
-      required: true
-      default: "chrome"
-      type: choice
-      options:
-        - chrome
+      BROWSER:
+        description: "Select browser"
+        required: true
+        default: "chrome"
+        type: choice
+        options:
+          - chrome
 
-    MARKER:
-      description: "Select pytest marker"
-      required: true
-      default: "smoke"
-      type: choice
-      options:
-        - smoke
-        - regression
+      MARKER:
+        description: "Select pytest marker"
+        required: true
+        default: "smoke"
+        type: choice
+        options:
+          - smoke
+          - regression
 
-    THREADS:
-      description: "Select threads count"
-      required: false
-      default: "1"
-      type: choice
-      options:
-        - "3"
-        - "5"
+      THREADS:
+        description: "Select threads count"
+        required: false
+        default: "1"
+        type: choice
+        options:
+          - "3"
+          - "5"
 
 jobs:
   ui-test:
