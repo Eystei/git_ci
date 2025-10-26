@@ -6,8 +6,8 @@ RUN apk add --no-cache chromium chromium-chromedriver
 
 # Установка зависимостей для Хрома
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
-RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.38-r0/glibc-2.38-r0.apk
-RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.38-r0/glibc-bin-2.38-r0.apk
+RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.39-r0/glibc-2.39-r0.apk
+RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.39-r0/glibc-bin-2.39-r0.apk
 
 # Установка Allure
 RUN apk update && \
