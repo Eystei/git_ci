@@ -1,0 +1,9 @@
+.venv
+.env
+.idea
+.DS_Store
+allurectl
+*__pycache__*
+report
+venv
+allure-results
